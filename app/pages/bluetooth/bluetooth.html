@@ -1,0 +1,30 @@
+<ion-navbar *navbar>
+    <ion-title>
+        Bluetooth
+    </ion-title>
+    <ion-buttons end>
+        <button (click)="startSearching()">
+            Start
+        </button>
+        <button (click)="stopSearching()">
+            Stop
+        </button>
+    </ion-buttons>
+</ion-navbar>
+
+<ion-content class="bluetooth">
+    <div>
+        {{log}}
+    </div>
+    <div>
+        {{text}}
+    </div>
+    <ion-card *ngFor="#device of foundDevices">
+        <ion-card-header>
+            Device
+        </ion-card-header>
+        <ion-card-content>
+            {{ device }}
+        </ion-card-content>
+    </ion-card>
+</ion-content>

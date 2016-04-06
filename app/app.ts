@@ -2,6 +2,7 @@ import {App, Platform} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {MapPage} from './pages/map/map';
+import {BluetoothPage} from './pages/bluetooth/bluetooth';
 
 
 @App({
@@ -10,7 +11,8 @@ import {MapPage} from './pages/map/map';
 })
 export class MyApp {
   //rootPage: any = HomePage;
-  rootPage: any = MapPage;
+  //rootPage: any = MapPage;
+  rootPage: any = BluetoothPage 
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
